@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import os as os
+obj=__import__("my-voice-analysis")
 
 # app
 app = Flask(__name__)
@@ -8,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 
 def predict():
-    obj=__import__("my-voice-analysis")
+    
     # get data
     data = request.get_json(force=True)
 
