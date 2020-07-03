@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 
 def predict():
+    obj=__import__("my-voice-analysis")
     # get data
     data = request.get_json(force=True)
 
